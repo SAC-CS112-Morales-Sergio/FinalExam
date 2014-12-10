@@ -1,0 +1,45 @@
+ public class RandomNumber  
+ { 
+ 	Random random = new Random(); 
+ 	 
+ 	public int RNG(int Max) 
+ 	{ 
+ 		return random.nextInt(Max)+1; 
+ 	} 
+ } 
+public class Dice extends RandomNumber 
+ { 
+ 	protected static int Max=6; 
+ 	private int Value; 
+ 	 
+ 	int n_throw; 
+ 	int sum; 
+ 	 
+RandomNumber random = new RandomNumber(); 
+ public Dice() 
+ 	{ 
+ 		Value = Throw(); 
+ 	} 
+ public int GetValue() 
+ 	{ 
+ 		return this.Value; 
+ 	} 
+ public int Throw() 
+ 	{ 
+ 		return RNG(Dice.Max); 
+ 	} 
+ public String toString() 
+ 	{ 
+ 		return "Total dice: " + n_throw + "\nLast Value Thrown: " + sum; 
+ 	} 
+ } 
+ public class DoubleDice extends Dice 
+ { 
+	int x; 
+ public DoubleDice() { 
+ 	} 
+ 	 public int GetValue() { 
+ 		x = 1 + (int) (Math.random() * 12); 
+ 		return x; 
+ 	} 
+} 
