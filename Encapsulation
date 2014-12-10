@@ -1,0 +1,17 @@
+ public Dice() 
+ 	{ 
+ 		Value = Throw(); 
+ 	} 
+ 	public int GetValue() 
+ 	{ 
+ 		return this.Value; 
+ 	} 
+ 	public int Throw() 
+ 	{ 
+		return RNG(Dice.Max); 
+ 	} 
+	public String toString() 
+ 	{ 
+ 		return "Total dice: " + n_throw + "\nLast Value Thrown: " + sum; 
+ 	} 
+ } 
